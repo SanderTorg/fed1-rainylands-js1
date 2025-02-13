@@ -27,21 +27,13 @@ export function productTemplate({
           <a href=${detailsUrl}>${title}</a>
         </h1>
 
-        <div class="c-product-preview-rating">
-          <span>&#9733;</span>
-          <span>&#9733;</span>
-          <span>&#9733;</span>
-          <span>&#9733;</span>
-          <span>&#9734;</span>
-          <span>(666 reviews)</span>
-        </div>
         <div class="c-product-preview-price">${price} ${CURRENCY}</div>
         <div class="c-product-preview-description">
           <p>
             ${description}
           </p>
         </div>
-        <button class="c-add-to-cart" id="js-add-to-cart-${id}">Add to Cart</button>
+        <button class="c-product-add-to-cart" id="js-add-to-cart-${id}">Add to Cart</button>
       </div>
     </article>
  `;

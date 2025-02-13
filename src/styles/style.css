@@ -1,4 +1,5 @@
 /* imports */
+@import "./skeletonTemplate.css";
 @import "./productsTemplate.css";
 @import "./cart.css";
 @import "./card-option.css";
@@ -49,6 +50,8 @@ body {
 
   --color-blue: #136797;
   --color-black: #050505;
+
+  --skeleton-color: #6a6868;
 
   --color-menu-cart: #202122;
 
@@ -283,11 +286,6 @@ img {
   padding: 0.5rem 5%;
 }
 
-.c-products {
-  display: flex;
-  flex-direction: column;
-}
-
 @media only screen and (width > 600px) {
   .c-sorting {
     justify-content: baseline;
@@ -441,10 +439,4 @@ img {
     font-size: var(--size-l);
     padding: 1rem 2rem;
   }
-}
-
-/* Product template */
-
-.c-product-preview-details {
-  display: flex;
 }

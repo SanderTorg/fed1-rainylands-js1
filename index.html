@@ -117,32 +117,30 @@
         <div class="c-sorting">
           <div class="l-filterby">
             <div class="c-filterby-text c-text">Filter by:</div>
-            <form class="c-form">
-              <select name="gender" id="js-gender" class="c-filter-box">
+            <div class="c-form">
+              <select name="gender" id="js-filter-gender" class="c-filter-box">
                 <option value="gender">Gender</option>
                 <option value="men">Men</option>
                 <option value="women">Women</option>
               </select>
-            </form>
+            </div>
           </div>
 
           <div class="l-filterby">
             <div class="c-filterby-text c-text">Sort by:</div>
 
-            <form class="c-form">
-              <select name="sort-by" id="js-sort-by" class="c-filter-box">
-                <option value="price">Price</option>
+            <div class="c-form">
+              <select name="sort-by" id="js-sort-price" class="c-filter-box">
+                <option value="Default">Default</option>
                 <option value="LowHigh">Low-High</option>
                 <option value="HighLow">High-Low</option>
               </select>
-            </form>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="c-products">
-        <div id="js-products-render" class="products-list"></div>
-      </section>
+      <section id="js-products-render" class="products-list"></section>
     </main>
 
     <footer class="l-footer">
