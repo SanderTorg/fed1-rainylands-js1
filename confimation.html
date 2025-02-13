@@ -1,0 +1,190 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainyland</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Prata:regular"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Prompt:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Play:regular,700"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="./src/index.mjs"></script>
+    <link rel="stylesheet" href="./src/styles/style.css" />
+  </head>
+  <body>
+    <header class="l-header">
+      <nav class="c-navbar">
+        <a href="/" class="c-brand-name" aria-label="link to home page"
+          >RainyLand
+        </a>
+
+        <ul class="c-nav-menu">
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="index.html"
+              class="c-nav-link"
+              aria-label="link to home page"
+              >Home
+            </a>
+          </li>
+
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="product-details.html"
+              class="c-nav-link"
+              aria-label="link to product-details page"
+              >Products
+            </a>
+          </li>
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="checkout.html"
+              class="c-nav-link"
+              aria-label="link to product-details page"
+              >Checkout
+            </a>
+          </li>
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="card.html"
+              class="c-nav-link"
+              aria-label="link to card page"
+              >Card
+            </a>
+          </li>
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="confimation.html"
+              class="c-nav-link"
+              aria-label="link to confimation page"
+              >Confirm
+            </a>
+          </li>
+        </ul>
+
+        <div class="c-nav-right">
+          <div class="c-cart-item">
+            <a id="js-cart-toggle" class="c-cart-btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+          <div>
+            <div class="c-hamburger">
+              <span class="c-bar"></span>
+              <span class="c-bar"></span>
+              <span class="c-bar"></span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <section class="c-hero">
+        <div class="c-back-btn">
+          <a href="card.html" aria-label="link back to card page"
+            ><i class="fa-solid fa-arrow-left"></i>Back</a
+          >
+        </div>
+        <div class="c-main-header">Guest checkout</div>
+        <div class="c-line-progress">
+          <div class="c-line-container">
+            <div class="c-line-black-container">
+              <div class="c-line-text">Cart</div>
+              <div class="c-line-checked-container">
+                <div class="c-line-checked">
+                  <div class="c-dot-checked"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-confirm-line-black-container">
+              <div class="c-line-text">Checkout</div>
+              <div class="c-line-dobbel-container">
+                <div class="c-line-black">
+                  <div class="c-dot-black"></div>
+                </div>
+                <div class="c-line-filler"></div>
+              </div>
+            </div>
+
+            <div class="c-confirm-line-grey-container">
+              <div class="c-line-text">Success</div>
+              <div class="c-line-grey">
+                <div class="c-dot-grey"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-success">
+        <div class="c-success-container">
+          <div class="c-circle-container">
+            <div class="c-circle">
+              <div class="c-v-icon animate__animated animate__zoomIn">
+                <span><i class="fa-solid fa-check"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="c-text-1">
+            Your payment has been successfully processed
+          </div>
+          <div class="c-text-2">Product will arrive in 3-5 days</div>
+          <div class="c-text-3">YOUR ORDER NO: 893979374920</div>
+
+          <div class="c-btn-container">
+            <a href="index.html"
+              ><input
+                type="submit"
+                name="submit"
+                id="submit"
+                value="Continue shopping here"
+                aria-label="submit link to main page"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="l-footer">
+      <div class="c-icon-container">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+
+      <div class="c-copyrights">
+        <p>&copy; 2025 RainyLands. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

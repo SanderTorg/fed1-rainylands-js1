@@ -1,0 +1,296 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainyland</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Prata:regular"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Prompt:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Play:regular,700"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="./src/index.mjs"></script>
+
+    <link rel="stylesheet" href="./src/styles/card-option.css" />
+  </head>
+  <body>
+    <header class="l-header">
+      <nav class="c-navbar">
+        <a href="/" class="c-brand-name" aria-label="link to home page"
+          >RainyLand
+        </a>
+
+        <ul class="c-nav-menu">
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="index.html"
+              class="c-nav-link"
+              aria-label="link to home page"
+              >Home
+            </a>
+          </li>
+
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="product-details.html"
+              class="c-nav-link"
+              aria-label="link to product-details page"
+              >Products
+            </a>
+          </li>
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="checkout.html"
+              class="c-nav-link"
+              aria-label="link to product-details page"
+              >Checkout
+            </a>
+          </li>
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="card.html"
+              class="c-nav-link"
+              aria-label="link to card page"
+              >Card
+            </a>
+          </li>
+          <li role="home" aria-label="home page" class="c-nav-item">
+            <a
+              href="confimation.html"
+              class="c-nav-link"
+              aria-label="link to confimation page"
+              >Confirm
+            </a>
+          </li>
+        </ul>
+
+        <div class="c-nav-right">
+          <div class="c-cart-item">
+            <a id="js-cart-toggle" class="c-cart-btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+          <div>
+            <div class="c-hamburger">
+              <span class="c-bar"></span>
+              <span class="c-bar"></span>
+              <span class="c-bar"></span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <section class="c-hero">
+        <div class="c-back-btn">
+          <a href="checkout.html" aria-label="link you back to info cart page"
+            ><i class="fa-solid fa-arrow-left"></i>Back</a
+          >
+        </div>
+        <div class="c-main-header">Guest checkout</div>
+        <div class="c-line-progress">
+          <div class="c-line-container">
+            <div class="c-line-black-container">
+              <div class="c-line-text">Cart</div>
+              <div class="c-line-checked-container">
+                <div class="c-line-checked">
+                  <div class="c-dot-checked"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-line-black-container">
+              <div class="c-line-text">Checkout</div>
+              <div class="c-line-dobbel-container">
+                <div class="c-line-black">
+                  <div class="c-dot-black"></div>
+                </div>
+                <div class="c-line-filler"></div>
+              </div>
+            </div>
+
+            <div class="c-line-grey-container">
+              <div class="c-line-text">Success</div>
+              <div class="c-line-grey">
+                <div class="c-dot-grey"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-form-container">
+        <form
+          action="card.html"
+          aria-label="link you to card page"
+          class="c-payment"
+        >
+          <div class="c-payment-container">
+            <div class="c-pay-header">Choose payment method</div>
+
+            <div class="c-all-cards-container">
+              <div class="c-card-container">
+                <div class="c-difference">
+                  <div class="c-checkbox-container">
+                    <input
+                      type="checkbox"
+                      name="visa"
+                      id="visa"
+                      class="c-checkbox"
+                      required
+                    />
+                  </div>
+                  <div class="c-card-name-container">
+                    <div class="c-card-name">Visa / Mastercard</div>
+                  </div>
+                </div>
+                <div class="c-card-img-container">
+                  <img src="./images/visa-small.jpg" alt="visa card image" />
+                  <img src="./images/master-small.jpg" alt="Mastercard image" />
+                </div>
+              </div>
+
+              <div class="c-card-container">
+                <div class="c-difference">
+                  <div class="c-checkbox-container">
+                    <input
+                      type="checkbox"
+                      name="visa"
+                      id="visa"
+                      class="c-checkbox"
+                    />
+                  </div>
+                  <div class="c-card-name-container">
+                    <div class="c-card-name">Paypal</div>
+                  </div>
+                </div>
+                <div class="c-card-img-container">
+                  <img
+                    src="./images/paypal-small.jpg"
+                    alt="Paypal card image"
+                  />
+                </div>
+              </div>
+
+              <div class="c-card-container">
+                <div class="c-difference">
+                  <div class="c-checkbox-container">
+                    <input
+                      type="checkbox"
+                      name="visa"
+                      id="visa"
+                      class="c-checkbox"
+                    />
+                  </div>
+                  <div class="c-card-name-container">
+                    <div class="c-card-name">Klarna</div>
+                  </div>
+                </div>
+
+                <div class="c-card-img-container">
+                  <img
+                    src="./images/klarna-small.jpg"
+                    alt="Klarna card image"
+                  />
+                </div>
+              </div>
+
+              <div class="c-card-container">
+                <div class="c-difference">
+                  <div class="c-checkbox-container">
+                    <input
+                      type="checkbox"
+                      name="visa"
+                      id="visa"
+                      class="c-checkbox"
+                    />
+                  </div>
+                  <div class="c-card-name-container">
+                    <div class="c-card-name">American Express</div>
+                  </div>
+                </div>
+                <div class="c-card-img-container">
+                  <img
+                    src="./images/amex-small.jpg"
+                    alt="American Express card image"
+                  />
+                </div>
+              </div>
+
+              <div class="c-card-container">
+                <div class="c-difference">
+                  <div class="c-checkbox-container">
+                    <input
+                      type="checkbox"
+                      name="visa"
+                      id="visa"
+                      class="c-checkbox"
+                    />
+                  </div>
+                  <div class="c-card-name-container">
+                    <div class="c-card-name">Vipps</div>
+                  </div>
+                </div>
+                <div class="c-card-img-container">
+                  <img
+                    src="./images/master-card-page.svg"
+                    alt="visa card image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="c-btn-container">
+              <input
+                type="submit"
+                name="submit"
+                id="submit"
+                value="Submit"
+                aria-label="Links to card page"
+              />
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="l-footer">
+      <div class="c-icon-container">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+
+      <div class="c-copyrights">
+        <p>&copy; 2025 RainyLands. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

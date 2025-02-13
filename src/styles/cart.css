@@ -1,0 +1,115 @@
+/* Aside cart */
+.c-cart {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  min-width: 300px;
+  max-width: 40vw;
+  height: 91dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-menu-cart);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  transition: transform 0.3s cubic-bezier(0.57, -0.04, 0, 1.23);
+  transform: translateX(100%);
+}
+
+.c-cart.is-open {
+  transform: translateX(0);
+}
+
+.c-cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  color: var(--bg-color-white);
+}
+
+.c-close-cart {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--bg-color-white);
+}
+
+.c-cart-products {
+  flex-grow: 1;
+  overflow-y: auto;
+  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0rem 1rem 0rem;
+}
+
+.c-cart-product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.2rem;
+
+  img {
+    max-width: 100px;
+  }
+
+  .c-cart-product_row-first {
+    display: flex;
+    gap: 0.3rem;
+  }
+}
+
+.c-cart-item_quantity-total {
+  color: var(--stone-7);
+}
+
+.c-cart-item_controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: space-between;
+}
+
+.c-cart-item_quantity-container {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-cart-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0rem 1rem 0rem;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: var(--bg-color-white);
+  gap: 1rem;
+}
+
+.c-cart-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.c-cart-row a {
+  text-decoration: none;
+}
+
+.c-cart-aside-btn {
+  display: flex;
+  background-color: var(--color-blue);
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: var(--size-xxs);
+}
+
+.c-cart-aside-btn:hover {
+  background-color: var(--btn-color-hover);
+}

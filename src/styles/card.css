@@ -1,0 +1,439 @@
+.c-back-btn {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  font-size: var(--size-s);
+  padding-bottom: 1rem;
+}
+
+.c-main-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #021526;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: var(--size-l);
+  font-style: normal;
+  font-weight: 700;
+  padding-bottom: 3rem;
+}
+
+.c-line-progress {
+  display: flex;
+  width: 100%;
+
+  .c-line-container {
+    display: flex;
+    width: 100%;
+
+    .c-line-checked-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1 1 auto;
+      width: 100%;
+
+      .c-line-text {
+        display: flex;
+        color: #000;
+        font-family: "Roboto";
+        font-size: var(--size-m);
+        font-style: normal;
+        font-weight: 500;
+        padding-bottom: 1rem;
+      }
+
+      .c-line-checked {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid black;
+        width: 100%;
+        position: relative;
+
+        .c-dot-checked {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+          background-color: black;
+        }
+      }
+    }
+
+    .c-line-black-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1 1 auto;
+      width: 100%;
+
+      .c-line-text {
+        display: flex;
+        color: #000;
+        font-family: "Roboto";
+        font-size: var(--size-m);
+        font-style: normal;
+        font-weight: 500;
+        padding-bottom: 1rem;
+      }
+
+      .c-line-dobbel-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        width: 100%;
+
+        .c-line-black {
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          border-bottom: 3px solid black;
+          flex: 1 1 auto;
+          width: 100%;
+          position: relative;
+
+          .c-dot-black {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            background-color: #000;
+            right: -8px;
+          }
+        }
+
+        .c-line-filler {
+          display: flex;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 2px solid rgb(170, 169, 169);
+          width: 100%;
+          flex: 1 1 auto;
+        }
+      }
+    }
+
+    .c-line-grey-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1 1 auto;
+      width: 100%;
+
+      .c-line-text {
+        display: flex;
+        color: rgb(170, 169, 169);
+        font-family: "Roboto";
+        font-size: var(--size-m);
+        font-style: normal;
+        font-weight: 500;
+        padding-bottom: 1rem;
+      }
+
+      .c-line-grey {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid rgb(170, 169, 169);
+        width: 100%;
+        position: relative;
+
+        .c-dot-grey {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+          background-color: rgb(170, 169, 169);
+        }
+      }
+    }
+  }
+}
+
+.c-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 0rem;
+}
+
+.c-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0.25rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.c-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 345px;
+  height: auto;
+  padding: 1.5rem 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(122deg, #6e88e2 0%, #000 100%);
+
+  .c-master-img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .c-master-img-container img {
+    display: flex;
+    max-width: 48px;
+  }
+
+  .c-card-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    padding: 2rem 0rem;
+    color: white;
+    font-family: "Roboto";
+    font-size: var(--size-s);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    width: 100%;
+  }
+
+  .c-card-holder-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+
+    .c-card-holder-text {
+      display: flex;
+      font-family: "Roboto";
+      color: white;
+      font-size: var(--size-xxs);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .c-expire-text {
+      display: flex;
+      font-family: "Roboto";
+      color: white;
+      font-size: var(--size-xxs);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .c-card-name-date-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .c-card-name {
+      display: flex;
+      font-family: "Roboto";
+      color: white;
+      font-size: var(--size-xs);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .c-card-date {
+      display: flex;
+      font-family: "Roboto";
+      color: white;
+      font-size: var(--size-xs);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+.c-card-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3.5rem;
+  padding: 2rem 0.5rem 4rem 0.5rem;
+}
+
+.c-input {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+input#input {
+  position: absolute;
+  width: 100%;
+  outline: none;
+  height: 45px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid black;
+  font-size: var(--size-s);
+  letter-spacing: 1px;
+  padding-left: 0.5rem;
+}
+
+.c-label {
+  display: flex;
+  transform: translate(15px, -10px);
+  background-color: white;
+  padding: 0 0.5rem;
+}
+
+.c-date-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.c-calendar {
+  position: absolute;
+  left: 220px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.c-btn-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+input#submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: black;
+  font-size: var(--size-m);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+input#submit:hover {
+  background-color: rgb(20, 19, 19);
+}
+
+@media only screen and (width>600px) {
+  .c-main-header {
+    font-size: var(--size-xxl);
+  }
+
+  .c-card-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-width: 365px;
+    height: auto;
+    padding: 1.5rem 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(122deg, #6e88e2 0%, #000 100%);
+
+    .c-master-img-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+      width: 100%;
+
+      .c-master-img-container img {
+        display: flex;
+        width: 48px;
+      }
+    }
+
+    .c-card-number {
+      font-size: var(--size-xl);
+    }
+
+    .c-card-holder-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.5rem;
+
+      .c-card-holder-text {
+        font-size: var(--size-xxs);
+      }
+
+      .c-expire-text {
+        font-size: var(--size-xxs);
+      }
+    }
+
+    .c-card-name-date-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .c-card-name {
+        font-size: var(--size-m);
+      }
+
+      .c-card-date {
+        font-size: var(--size-m);
+      }
+    }
+  }
+
+  .c-date-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  input#submit {
+    padding: 1.2rem 3rem;
+  }
+}
+
+@media only screen and (width>999px) {
+  input#submit {
+    padding: 1.2rem 5rem;
+  }
+}
