@@ -8,6 +8,7 @@ const sortPriceEl = document.querySelector("#js-sort-price");
 const filterGenderEl = document.querySelector("#js-filter-gender");
 
 //Gotta put em products in a list
+let allProducts = [];
 
 // If some of the variables dont work its cracked
 // Else if its working then inwoke setup wich then again inwokes fetchingProducts
@@ -40,14 +41,13 @@ sortPriceEl.addEventListener("change", (event) => {
     lowToHigh();
   }
 
-  renderProductsListEl(containerProductsEl);
+  renderProductsListEl(allProducts);
 });
 
 // Main section
 
 // fetching (getting) products from an API with an async function
 async function fetchingProducts() {
-  let allProducts = [];
   let error = null;
 
   try {
