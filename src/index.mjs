@@ -18,7 +18,7 @@ let allProducts = [];
 setup();
 
 async function setup() {
-  if (!containerProductsEl || !sortPriceEl) {
+  if (!containerProductsEl || !sortPriceEl || filterGenderEl) {
     console.error("JS is CRACKED!");
   } else {
     loadingSkeleton(containerProductsEl);
