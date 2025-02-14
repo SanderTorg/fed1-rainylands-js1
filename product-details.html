@@ -36,6 +36,8 @@
       rel="stylesheet"
     />
     <script type="module" defer src="./src/index.mjs"></script>
+    <script type="module" defer src="./src/cart.mjs"></script>
+    <script type="module" defer src="./src/nav.mjs"></script>
     <link rel="stylesheet" href="./src/styles/style.css" />
   </head>
   <body>
@@ -108,7 +110,12 @@
 
     <main class="l-main">
       <section class="c-hero">
-        <h1 class="c-h1">This is Rainy Lands</h1>
+        <h1 class="c-h1">Product Details</h1>
+
+        <div class="c-containerDetails">
+          <div id="js-products-render"></div>
+          <div></div>
+        </div>
       </section>
     </main>
 
