@@ -39,6 +39,7 @@
     <script type="module" defer src="./src/cart.mjs"></script>
     <script type="module" defer src="./src/nav.mjs"></script>
     <link rel="stylesheet" href="./src/styles/style.css" />
+    <link rel="stylesheet" href="./src/styles/product-details.css" />
   </head>
   <body>
     <header class="l-header">
@@ -111,11 +112,42 @@
     <main class="l-main">
       <section class="c-hero">
         <h1 class="c-h1">Product Details</h1>
+      </section>
+      <section class="c-containerDetails" id="js-products-render">
+        <article class="c-productDetails-preview-details ${index}s">
+          <div class="c-productDetails-preview-image">
+            <a href="${detailsUrl}">
+              <img src="${imgUrl}" alt="${imgAl}" />
+            </a>
+          </div>
 
-        <div class="c-containerDetails">
-          <div id="js-products-render"></div>
-          <div></div>
-        </div>
+          <div class="c-productDetails-preview-info">
+            <h1 class="c-productDetails-preview-title">
+              <a href="{detailsUrl}">Thunderbolt Jacket</a>
+            </h1>
+            <div>Women's</div>
+
+            <div class="c-productDetails-preview-price">139.99 kr</div>
+
+            <div class="c-size">Size:</div>
+
+            <div class="c-form-size">
+              <select name="Size" id="js-filter-size" class="c-filter-size-box">
+                <option value="Size">Choose Size</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+              </select>
+            </div>
+
+            <button
+              class="c-productDetails-add-to-cart"
+              id="js-add-to-cart-${id}"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </article>
       </section>
     </main>
 
