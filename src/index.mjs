@@ -1,5 +1,5 @@
 import { APIURL, ERROR_IF_NOT_GETTING_DATA } from "./constants.mjs";
-import { createHTML, clearNode } from "./utils.mjs";
+import { createHTML, clearNode, setLocalItem, getLocalItem } from "./utils.mjs";
 import { productTemplate } from "./products/productTemplate.mjs";
 import { loadingSkeleton } from "./products/skeletonTemplate.mjs";
 
@@ -26,6 +26,8 @@ async function setup() {
     const { allProducts } = await fetchingProducts();
 
     renderProductsListEl(allProducts);
+
+    containerProductsEl.addEventListener("click", onProductClick);
   }
 }
 
@@ -51,14 +53,6 @@ filterGenderEl.addEventListener("change", (event) => {
   }
 });
 
-// const male = allProducts.filter((men) => {
-//   return men.gender === "men";
-// });
-
-// const female = allProducts.filter((female) => {
-//   return female.gender === "women";
-// });
-
 sortPriceEl.addEventListener("change", (event) => {
   clearNode(containerProductsEl);
   loadingSkeleton(containerProductsEl);
@@ -73,8 +67,6 @@ sortPriceEl.addEventListener("change", (event) => {
 
   renderProductsListEl(allProducts);
 });
-
-// Main section
 
 // fetching (getting) products from an API with an async function
 async function fetchingProducts() {
@@ -111,17 +103,6 @@ function renderProductsListEl(list = []) {
 
     const createNewEl = createHTML(template);
 
-    const btn = createNewEl.querySelector("button");
-
-    btn.addEventListener("click", () => {
-      addToCart({
-        id,
-        title,
-        imgUrl: image.url,
-        price,
-      });
-    });
-
     containerProductsEl.append(createNewEl);
   });
 }
@@ -132,4 +113,29 @@ function highToLow(list = allProducts) {
 
 function lowToHigh(list = allProducts) {
   list.sort((a, b) => b.price - a.price);
+}
+
+function onProductClick(event) {
+  const target = event.target;
+  /** @type {HTMLElement | undefined} */
+  const container = target.closest("[data-component='productPreviewDetails']");
+  const productId = container?.dataset?.productid;
+
+  if (target.tagName === "BUTTON" && container) {
+    /** @type {Array<ProductDetails>} */
+    const products = allProducts;
+    const foundProduct = products.find((p) => p.id === productId);
+
+    if (foundProduct) {
+      addToCart({
+        id: foundProduct.id,
+        title: foundProduct.title,
+        imgUrl: foundProduct.image.url,
+        price: foundProduct.price,
+      });
+    }
+  } else if (target.tagName === "IMG" && container) {
+    // The anchor tag will navigate the user. AS long as we dont use e.preventDefault();
+    console.log(`Navigate to product details for product ID: ${productId}`);
+  }
 }
