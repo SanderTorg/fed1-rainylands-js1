@@ -15,7 +15,7 @@ export function productTemplate({
 
   // Got layout from the legend himself Mo Sineke but design myself
   return `
-    <article class="c-product-preview-details ${index}s">
+    <article class="c-product-preview-details ${index}" data-productId="${id}" data-component="productPreviewDetails">
       <div class="c-product-preview-image">
         <a href=${detailsUrl}>
           <img src="${imgUrl}" alt="${imgAl}" />

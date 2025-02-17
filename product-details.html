@@ -35,7 +35,11 @@
       href="https://fonts.googleapis.com/css?family=Play:regular,700"
       rel="stylesheet"
     />
-    <script type="module" defer src="./src/index.mjs"></script>
+    <script
+      type="module"
+      defer
+      src="./src/products/detailsTemplate.mjs"
+    ></script>
     <script type="module" defer src="./src/cart.mjs"></script>
     <script type="module" defer src="./src/nav.mjs"></script>
     <link rel="stylesheet" href="./src/styles/style.css" />
@@ -48,7 +52,7 @@
           >RainyLand
         </a>
 
-        <ul class="c-nav-menu">
+        <ul class="c-nav-menu" id="js-nav-menu">
           <li role="home" aria-label="home page" class="c-nav-item">
             <a
               href="index.html"
@@ -93,13 +97,13 @@
         </ul>
 
         <div class="c-nav-right">
-          <div class="c-cart-item">
-            <a id="js-cart-toggle" class="c-cart-btn">
+          <div class="c-cart-icon">
+            <a id="js-cart-toggle" class="c-cart-icon-btn">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
           </div>
           <div>
-            <div class="c-hamburger">
+            <div class="c-hamburger" id="js-hamburger">
               <span class="c-bar"></span>
               <span class="c-bar"></span>
               <span class="c-bar"></span>
@@ -113,42 +117,10 @@
       <section class="c-hero">
         <h1 class="c-h1">Product Details</h1>
       </section>
-      <section class="c-containerDetails" id="js-products-render">
-        <article class="c-productDetails-preview-details ${index}s">
-          <div class="c-productDetails-preview-image">
-            <a href="${detailsUrl}">
-              <img src="${imgUrl}" alt="${imgAl}" />
-            </a>
-          </div>
-
-          <div class="c-productDetails-preview-info">
-            <h1 class="c-productDetails-preview-title">
-              <a href="{detailsUrl}">Thunderbolt Jacket</a>
-            </h1>
-            <div>Women's</div>
-
-            <div class="c-productDetails-preview-price">139.99 kr</div>
-
-            <div class="c-size">Size:</div>
-
-            <div class="c-form-size">
-              <select name="Size" id="js-filter-size" class="c-filter-size-box">
-                <option value="Size">Choose Size</option>
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-              </select>
-            </div>
-
-            <button
-              class="c-productDetails-add-to-cart"
-              id="js-add-to-cart-${id}"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </article>
-      </section>
+      <section
+        class="c-containerDetails"
+        id="js-productDetails-render"
+      ></section>
     </main>
 
     <footer class="l-footer">
@@ -162,5 +134,29 @@
         <p>&copy; 2025 RainyLands. All rights reserved.</p>
       </div>
     </footer>
+
+    <aside class="c-cart" id="js-cart">
+      <div class="c-cart-header">
+        <h2 class="c-cart-h2">Shopping Cart</h2>
+        <button class="c-close-cart" id="js-close-cart">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+
+      <div class="c-cart-products" id="js-cart-products"></div>
+
+      <div class="c-cart-footer">
+        <p>Total: <span id="js-cart-total">0</span></p>
+
+        <div class="c-cart-row">
+          <a href="checkout.html">
+            <button class="c-cart-aside-btn">Checkout</button>
+          </a>
+          <button class="c-cart-aside-btn" id="js-clear-cart">
+            Clear Cart
+          </button>
+        </div>
+      </div>
+    </aside>
   </body>
 </html>
