@@ -206,7 +206,7 @@
   .c-card-number {
     display: flex;
     flex-direction: row;
-    justify-content: baseline;
+    justify-content: center;
     padding: 2rem 0rem;
     color: white;
     font-family: "Roboto";
@@ -225,6 +225,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 0.5rem;
+    gap: 5.5rem;
 
     .c-card-holder-text {
       display: flex;
@@ -252,6 +253,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 6rem;
 
     .c-card-name {
       display: flex;
@@ -394,6 +396,7 @@ input#submit:hover {
       justify-content: space-between;
       align-items: center;
       padding-bottom: 0.5rem;
+      gap: 8rem;
 
       .c-card-holder-text {
         font-size: var(--size-xxs);
