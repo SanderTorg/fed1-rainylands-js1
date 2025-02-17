@@ -1,0 +1,117 @@
+/* Product template */
+
+.products-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.c-skeletonDetails-preview-details {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: 1px solid black;
+  padding: 1rem 1rem;
+}
+
+.c-skeletonDetails-preview-image {
+  width: 100%;
+}
+
+.c-skeletonDetails-preview-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media (width>600px) {
+    padding-left: 2rem;
+  }
+}
+
+.c-skeletonDetails-preview-title {
+  display: flex;
+  justify-content: start;
+  padding-top: 1rem;
+
+  @media (width>600px) {
+    padding-top: 0px;
+  }
+}
+
+.c-skeletonDetails-preview-title a {
+  color: black;
+}
+
+.c-skeletonDetails-preview-price {
+  display: flex;
+  font-weight: bold;
+  justify-content: start;
+  color: brown;
+}
+
+.c-size {
+  padding-top: 2rem;
+}
+
+.c-form-size {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin: 0px;
+
+  @media (width>600px) {
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+.c-filter-size-box {
+  display: flex;
+  text-align: start;
+  padding: 0.5rem 5%;
+}
+
+.c-skeletonDetails-add-to-cart {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-blue);
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: var(--size-xxs);
+  color: var(--bg-color-white);
+}
+
+.c-skeletonDetails-add-to-cart:hover {
+  background-color: var(--btn-color-hover);
+}
+
+@media screen and (width > 600px) {
+  .c-skeletonDetails-preview-details {
+    flex-direction: row;
+    width: 1100px;
+    gap: 1rem;
+  }
+
+  .c-skeletonDetails-preview-image {
+    width: 50%;
+  }
+
+  .c-skeletonDetails-preview-info {
+    width: 50%;
+  }
+
+  .c-skeletonDetails-preview-title {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .c-skeletonDetails-preview-price {
+    justify-content: start;
+    font-size: var(--size-m);
+  }
+}

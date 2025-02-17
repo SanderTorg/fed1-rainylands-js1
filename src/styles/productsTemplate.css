@@ -1,6 +1,6 @@
 /* Product template */
 
-.products-list {
+.c-containerDetails {
   display: flex;
   flex-direction: row;
   gap: 2rem;
