@@ -18,7 +18,7 @@ let allProducts = [];
 setup();
 
 async function setup() {
-  if (!containerProductsEl || !sortPriceEl) {
+  if (!containerProductsEl || !sortPriceEl || !filterGenderEl) {
     console.error("JS is CRACKED!");
   } else {
     loadingSkeleton(containerProductsEl);
@@ -35,21 +35,21 @@ filterGenderEl.addEventListener("change", (event) => {
 
   const val = event.target.value;
 
-  if (val === "male") {
-    male();
+  if (val === "men") {
+    const maleJackets = allProducts.filter(
+      (jacket) => jacket.gender === "Male"
+    );
+    renderProductsListEl(maleJackets);
   } else if (val === "women") {
-    female();
+    const femaleJackets = allProducts.filter(
+      (jacket) => jacket.gender === "Female"
+    );
+    renderProductsListEl(femaleJackets);
+  } else if (val === "gender") {
+    const defaultGender = allProducts;
+    renderProductsListEl(defaultGender);
   }
-
-  renderProductsListEl(allProducts);
 });
-
-function male(list = allProducts) {
-  list.filter((men) => men.gender === "Male");
-}
-function female(list = allProducts) {
-  list.filter((women) => women.gender === "Female");
-}
 
 // const male = allProducts.filter((men) => {
 //   return men.gender === "men";
