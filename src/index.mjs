@@ -29,6 +29,36 @@ async function setup() {
   }
 }
 
+filterGenderEl.addEventListener("change", (event) => {
+  clearNode(containerProductsEl);
+  loadingSkeleton(containerProductsEl);
+
+  const val = event.target.value;
+
+  if (val === "male") {
+    male();
+  } else if (val === "women") {
+    female();
+  }
+
+  renderProductsListEl(allProducts);
+});
+
+function male(list = allProducts) {
+  list.filter((men) => men.gender === "Male");
+}
+function female(list = allProducts) {
+  list.filter((women) => women.gender === "Female");
+}
+
+// const male = allProducts.filter((men) => {
+//   return men.gender === "men";
+// });
+
+// const female = allProducts.filter((female) => {
+//   return female.gender === "women";
+// });
+
 sortPriceEl.addEventListener("change", (event) => {
   clearNode(containerProductsEl);
   loadingSkeleton(containerProductsEl);
