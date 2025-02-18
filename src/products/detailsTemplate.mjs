@@ -108,6 +108,15 @@ function detailsTemplate({
                     Add to Cart
                 </button>
             </form>
+
+            <section class="c-ordering-info-container">
+             <div class="c-ordering-info">
+              <p> - Free shipping over 499kr</p>
+              <p> - Fast shipping</p>
+              <p> - Free returns </p>
+              <p> - Home delivery</p>
+             </div>
+            </section>
           </div>
         </article>
   `;
