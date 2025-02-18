@@ -2,6 +2,7 @@ import { APIURL, ERROR_IF_NOT_GETTING_DATA } from "./constants.mjs";
 import { createHTML, clearNode, setLocalItem, getLocalItem } from "./utils.mjs";
 import { productTemplate } from "./products/productTemplate.mjs";
 import { loadingSkeleton } from "./products/skeletonTemplate.mjs";
+import { itemBtnAddToCart } from "./cart.mjs";
 
 const containerProductsEl = document.querySelector("#js-products-render");
 const sortPriceEl = document.querySelector("#js-sort-price");
@@ -117,25 +118,23 @@ function lowToHigh(list = allProducts) {
 
 function onProductClick(event) {
   const target = event.target;
-  /** @type {HTMLElement | undefined} */
+
   const container = target.closest("[data-component='productPreviewDetails']");
   const productId = container?.dataset?.productid;
 
   if (target.tagName === "BUTTON" && container) {
-    /** @type {Array<ProductDetails>} */
     const products = allProducts;
-    const foundProduct = products.find((p) => p.id === productId);
+    const selectedProduct = products.find((p) => p.id === productId);
 
-    if (foundProduct) {
-      addToCart({
-        id: foundProduct.id,
-        title: foundProduct.title,
-        imgUrl: foundProduct.image.url,
-        price: foundProduct.price,
+    if (selectedProduct) {
+      itemBtnAddToCart({
+        id: selectedProduct.id,
+        title: selectedProduct.title,
+        imgUrl: selectedProduct.image.url,
+        price: selectedProduct.price,
       });
     }
   } else if (target.tagName === "IMG" && container) {
-    // The anchor tag will navigate the user. AS long as we dont use e.preventDefault();
     console.log(`Navigate to product details for product ID: ${productId}`);
   }
 }
