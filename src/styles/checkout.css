@@ -399,6 +399,13 @@ input#input {
   width: 100%;
 }
 
+.c-checkoutProducts-cont {
+  display: flex;
+  flex-direction: row;
+  max-height: auto;
+  width: auto;
+}
+
 .c-img-container {
   display: flex;
   flex-direction: column;
@@ -406,73 +413,14 @@ input#input {
   align-items: center;
 }
 
-.c-img-container img {
-  max-width: 100%;
+.c-checkoutProducts-img {
+  max-width: 100px;
   height: auto;
 }
 
-.c-info-container {
+.c-checkoutProduct-info {
   display: flex;
-  flex-direction: column;
-  max-width: 100%;
-}
-
-.c-info-container .c-header {
-  display: flex;
-  font-size: var(--size-s);
-  font-weight: 600;
-  font-family: "Prompt";
-  color: #021526;
-}
-
-.c-pcs {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-family: "Prompt";
-  font-size: var(--size-s);
-  font-weight: 400;
-  padding: 0.5rem 0rem;
-}
-
-.c-add-more {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1rem;
-}
-
-.c-minus {
-  display: flex;
-  width: 45px;
-  height: 45px;
-  border: 1px solid #6f6d6d;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: var(--size-l);
-  cursor: pointer;
-}
-
-.c-item-count {
-  display: flex;
-  align-items: center;
-  font-family: "Prompt";
-  font-size: var(--size-l);
-}
-
-.c-plus {
-  display: flex;
-  width: 45px;
-  height: 45px;
-  border: 1px solid #6f6d6d;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: var(--size-l);
-  cursor: pointer;
+  width: 100%;
 }
 
 .c-subtotal-container {

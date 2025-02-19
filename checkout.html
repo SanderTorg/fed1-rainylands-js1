@@ -35,7 +35,7 @@
       href="https://fonts.googleapis.com/css?family=Play:regular,700"
       rel="stylesheet"
     />
-    <script type="module" defer src="./src/index.mjs"></script>
+    <script type="module" defer src="/src/checkout/checkout.mjs"></script>
     <script type="module" defer src="./src/cart.mjs"></script>
     <script type="module" defer src="./src/nav.mjs"></script>
     <link rel="stylesheet" href="./src/styles/style.css" />
@@ -47,7 +47,7 @@
           >RainyLand
         </a>
 
-        <ul class="c-nav-menu">
+        <ul class="c-nav-menu" id="js-nav-menu">
           <li role="home" aria-label="home page" class="c-nav-item">
             <a
               href="index.html"
@@ -92,13 +92,13 @@
         </ul>
 
         <div class="c-nav-right">
-          <div class="c-cart-item">
-            <a id="js-cart-toggle" class="c-cart-btn">
+          <div class="c-cart-icon">
+            <a id="js-cart-toggle" class="c-cart-icon-btn">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
           </div>
           <div>
-            <div class="c-hamburger">
+            <div class="c-hamburger" id="js-hamburger">
               <span class="c-bar"></span>
               <span class="c-bar"></span>
               <span class="c-bar"></span>
@@ -112,7 +112,7 @@
       <section class="c-hero">
         <div class="c-back-btn">
           <a
-            href="product-details.html"
+            href="index.html"
             aria-label="Links back to jacket desctribtion page"
             ><i class="fa-solid fa-arrow-left"></i>Back</a
           >
@@ -169,39 +169,13 @@
 
                 <div class="c-under-line-container">
                   <div class="c-container-item">1 Item</div>
-                  <div class="c-container">
-                    <i class="fa-solid fa-pen"></i>
-                    <div>Edit cart</div>
-                  </div>
                 </div>
-                <div class="c-summary-produckt-container">
-                  <div class="c-img-container">
-                    <img
-                      src="/images/jacket-specific/image-1.jpg"
-                      alt="picture of a model with a red jacket"
-                    />
-                  </div>
 
-                  <div class="c-info-container">
-                    <div class="c-header">Nordsjo Winter Parka</div>
-                    <div class="c-pcs">
-                      <div>5.399kr</div>
-                      <div>Color: Red</div>
-                      <div>Size: M</div>
-                    </div>
-                    <div class="c-add-more">
-                      <div class="c-minus">
-                        <i class="fa-solid fa-minus"></i>
-                      </div>
+                <div
+                  class="c-summary-produckt-container"
+                  id="js-summary-products"
+                ></div>
 
-                      <div class="c-item-count">1</div>
-
-                      <div class="c-plus">
-                        <i class="fa-solid fa-plus"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="c-summary-line"></div>
 
                 <div class="c-subtotal-container">
@@ -373,5 +347,29 @@
         <p>&copy; 2025 RainyLands. All rights reserved.</p>
       </div>
     </footer>
+    <aside class="c-cart" id="js-cart">
+      <div class="c-cart-header">
+        <h2>Shopping Cart</h2>
+        <button class="c-close-cart" id="js-close-cart">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+
+      <div class="c-cart-products" id="js-cart-products"></div>
+
+      <div class="c-cart-footer">
+        <p>Total: <span id="js-cart-total">0</span> <span>kr</span></p>
+
+        <div class="c-cart-row">
+          <a href="checkout.html">
+            <button class="c-cart-aside-btn">Checkout</button>
+          </a>
+
+          <button class="c-cart-aside-btn" id="js-clear-cart">
+            Clear Cart
+          </button>
+        </div>
+      </div>
+    </aside>
   </body>
 </html>
