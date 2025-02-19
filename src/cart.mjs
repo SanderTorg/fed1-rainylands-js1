@@ -101,7 +101,7 @@ export function itemBtnAddToCart({ id, imgUrl, title, price, quantity = 1 }) {
   renderCartItems(products);
 }
 
-function getItemsFromStorage() {
+export function getItemsFromStorage() {
   return JSON.parse(window.localStorage.getItem("cart")) ?? [];
 }
 
