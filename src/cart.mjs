@@ -7,7 +7,6 @@ const cartToggleBtnEL = document.querySelector("#js-cart-toggle");
 const cartContainerEl = document.querySelector("#js-cart");
 const cartCloseBtnEl = document.querySelector("#js-close-cart");
 const containerItemsEl = document.querySelector("#js-cart-products");
-const cartTotalEl = document.querySelector("#js-cart-total");
 const clearCartBtnEl = document.querySelector("#js-clear-cart");
 
 setup();
@@ -18,7 +17,6 @@ function setup() {
     !cartContainerEl ||
     !cartCloseBtnEl ||
     !containerItemsEl ||
-    !cartTotalEl ||
     !clearCartBtnEl
   ) {
     console.error("JS is CRACKED!");
@@ -56,21 +54,16 @@ function cartTemplate({
           <h3>${title}</h3>
         </a>
         <strong class="c-cart-item-price">${price} ${CURRENCY}</strong>
-        <button class="c-cart-btn-remove" data-id="${id}">Remove</button>
+        <button class="c-cart-btn-remove" item-btn="removeCartItem" id="${id}">Remove</button>
     </div>
   </article>
   `;
 }
 
-function clearAllItemsFromCart() {
-  setItemsToStorage([]);
-  renderCartItems([]);
-}
-
-function renderCartItems(list = []) {
+function renderCartItems(items = []) {
   clearNode(containerItemsEl);
 
-  list.forEach(({ id, imgUrl, title, price }) => {
+  items.forEach(({ id, imgUrl, title, price }) => {
     const template = cartTemplate({
       id,
       title,
@@ -80,29 +73,32 @@ function renderCartItems(list = []) {
 
     const createNewEl = createHTML(template);
 
+    const removeBtnEl = createNewEl.querySelector(
+      '[item-btn="removeCartItem"]'
+    );
+
+    removeBtnEl.addEventListener("click", (event) => {
+      removeItemFromCart(items, event.target.id);
+    });
+
     containerItemsEl.append(createNewEl);
   });
 }
 
-export function itemBtnAddToCart({ id, imgUrl, title, price }) {
-  const items = getItemsFromStorage();
+export function itemBtnAddToCart({ id, imgUrl, title, price, quantity = 1 }) {
+  const products = getItemsFromStorage();
 
-  const foundProductIndex = items.findIndex((item) => {
-    return item.id === id;
+  products.push({
+    id,
+    title,
+    imgUrl,
+    price,
+    quantity: quantity,
   });
 
-  if (foundProductIndex === -1) {
-    items.push({
-      id,
-      title,
-      imgUrl,
-      price,
-    });
-  }
+  setItemsToStorage(products);
 
-  setItemsToStorage(items);
-
-  renderCartItems(items);
+  renderCartItems(products);
 }
 
 function getItemsFromStorage() {
@@ -111,4 +107,17 @@ function getItemsFromStorage() {
 
 function setItemsToStorage(items = []) {
   window.localStorage.setItem("cart", JSON.stringify(items));
+}
+
+function clearAllItemsFromCart() {
+  setItemsToStorage([]);
+  renderCartItems([]);
+}
+
+function removeItemFromCart(items = [], productId) {
+  const temp = items.filter((item) => item.id != productId);
+
+  setItemsToStorage(temp);
+
+  renderCartItems(temp);
 }

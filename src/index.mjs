@@ -1,5 +1,5 @@
 import { APIURL, ERROR_IF_NOT_GETTING_DATA } from "./constants.mjs";
-import { createHTML, clearNode, setLocalItem, getLocalItem } from "./utils.mjs";
+import { createHTML, clearNode } from "./utils.mjs";
 import { productTemplate } from "./products/productTemplate.mjs";
 import { loadingSkeleton } from "./products/skeletonTemplate.mjs";
 import { itemBtnAddToCart } from "./cart.mjs";
@@ -116,7 +116,7 @@ function lowToHigh(list = allProducts) {
   list.sort((a, b) => b.price - a.price);
 }
 
-function onProductClick(event) {
+export function onProductClick(event) {
   const target = event.target;
 
   const container = target.closest("[data-component='productPreviewDetails']");
@@ -135,6 +135,6 @@ function onProductClick(event) {
       });
     }
   } else if (target.tagName === "IMG" && container) {
-    console.log(`Navigate to product details for product ID: ${productId}`);
+    console.error(`Navigate to product details for product ID: ${productId}`);
   }
 }
