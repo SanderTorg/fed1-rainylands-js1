@@ -5,6 +5,7 @@ import {
   createHTML,
   getDOMElements,
 } from "../utils.mjs";
+import { itemBtnAddToCart } from "../cart.mjs";
 
 const DOMElements = getDOMElements(["#js-productDetails-render"], document);
 const [containerProductsEl] = DOMElements;
@@ -20,7 +21,6 @@ function setup() {
     }
 
     const id = getIdFromUrl();
-
     renderProductDetails(id, containerProductsEl);
   } catch (error) {
     // Log an error message if either element is missing
@@ -128,7 +128,7 @@ function handleFormSubmit(event) {
 
   const formData = new FormData(event.target);
 
-  addToCart({
+  itemBtnAddToCart({
     id: getIdFromUrl(),
     imgUrl: formData.get("imgUrl"),
     price: formData.get("price"),
