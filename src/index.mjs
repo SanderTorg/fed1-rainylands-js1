@@ -116,6 +116,8 @@ function lowToHigh(list = allProducts) {
   list.sort((a, b) => b.price - a.price);
 }
 
+// The on product is hevily influenced by Monde Sineke (My teacher) :)
+
 export function onProductClick(event) {
   const target = event.target;
 

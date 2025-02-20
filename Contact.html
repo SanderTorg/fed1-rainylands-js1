@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RainyLand | Home</title>
+    <title>Terms and Conditions</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -35,7 +35,7 @@
       href="https://fonts.googleapis.com/css?family=Play:regular,700"
       rel="stylesheet"
     />
-    <script type="module" defer src="./src/index.mjs"></script>
+
     <script type="module" defer src="./src/cart.mjs"></script>
     <script type="module" defer src="./src/nav.mjs"></script>
     <link rel="stylesheet" href="./src/styles/style.css" />
@@ -57,23 +57,6 @@
             </a>
           </li>
 
-          <li role="home" aria-label="home page" class="c-nav-item">
-            <a
-              href="checkout.html"
-              class="c-nav-link"
-              aria-label="link to product-details page"
-              >Checkout
-            </a>
-          </li>
-
-          <li role="home" aria-label="home page" class="c-nav-item">
-            <a
-              href="confimation.html"
-              class="c-nav-link"
-              aria-label="link to confimation page"
-              >Confirm
-            </a>
-          </li>
           <li role="home" aria-label="home page" class="c-nav-item">
             <a
               href="Contact.html"
@@ -111,36 +94,39 @@
 
     <main class="l-main">
       <section class="c-hero">
-        <h1 class="c-h1">This is Rainy Lands</h1>
-      </section>
-      <section class="c-filters">
-        <h2 class="c-h2">Products</h2>
-        <div class="c-sorting">
-          <div class="l-filterby">
-            <div class="c-filterby-text c-text">Filter by:</div>
-            <div class="c-form">
-              <select name="gender" id="js-filter-gender" class="c-filter-box">
-                <option value="gender">Gender</option>
-                <option value="men">Men</option>
-                <option value="women">Women</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="l-filterby">
-            <div class="c-filterby-text c-text">Sort by:</div>
-
-            <div class="c-form">
-              <select name="sort-by" id="js-sort-price" class="c-filter-box">
-                <option value="LowHigh">Low-High</option>
-                <option value="HighLow">High-Low</option>
-              </select>
-            </div>
-          </div>
+        <div class="c-back-btn">
+          <a href="index.html" aria-label="Links back to home page"
+            ><i class="fa-solid fa-arrow-left"></i>Back</a
+          >
         </div>
+        <div class="c-main-header">Contact</div>
       </section>
-
-      <section id="js-products-render" class="products-list"></section>
+      <section>
+        <section class="section-2-contact">
+          <div class="section-2-title-contact">
+            <h3>About your order</h3>
+          </div>
+          <div class="section-2-text-contact">
+            <p>
+              If you have any questions, please contact us, Monday to Friday 9
+              AM - 5 PM GMT at +00 12345678
+            </p>
+            <p>
+              To contact us by email, please select a category from the drop
+              down menu and fill in the fields below with as much detailed
+              information as possible so we ensure your request gets passed to
+              the correct team member.
+            </p>
+            <p>
+              As soon as we have received your message you'll receive a
+              confirmation response email with a case number on it. If you do
+              not receive a case number response email it means your message has
+              not got through to us so please check your spam/junk folder or try
+              again.
+            </p>
+          </div>
+        </section>
+      </section>
     </main>
 
     <footer class="l-footer">
@@ -151,13 +137,9 @@
       </div>
 
       <div class="c-copyrights">
-        <p>
-          &copy; 2025 RainyLands. All rights reserved. This is a student
-          project.
-        </p>
+        <p>&copy; 2025 RainyLands. All rights reserved.</p>
       </div>
     </footer>
-
     <aside class="c-cart" id="js-cart">
       <div class="c-cart-header">
         <h2>Shopping Cart</h2>
