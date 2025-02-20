@@ -5,7 +5,7 @@
 - [Production deploy](https://rainylands.netlify.app/)
 - [Production Deployment Dashboard](https://app.netlify.com/sites/rainylands/overview)
 - [API URL](https://docs.noroff.dev/docs/v2/e-commerce/rainy-days)
-- [Github](https://github.com/SanderTorg)
+- [Github](https://github.com/SanderTorg/fed1-rainylands-js1)
 - [TODOS](https://github.com/SanderTorg/fed1-rainylands-js1/issues)
 
 ## Tech Stack
