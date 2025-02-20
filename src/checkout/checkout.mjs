@@ -6,17 +6,17 @@ const summaryEl = document.querySelector("#js-summary-products");
 
 const cartProducts = getItemsFromStorage();
 
-renderCartProducts(cartProducts);
+renderCartProductsToCheckout(cartProducts);
 
-function renderCartProducts(list = []) {
+function renderCartProductsToCheckout(list = []) {
   list.forEach((cartProduct) => {
-    const summaryProductTemplate = createCartProductTemplate(cartProduct);
+    const summaryProductTemplate = createSummaryProductTemplate(cartProduct);
     const cartProductEl = createHTML(summaryProductTemplate);
     summaryEl.append(cartProductEl);
   });
 }
 
-function createCartProductTemplate(cartProducts) {
+function createSummaryProductTemplate(cartProducts) {
   return `
 	<div class="c-checkoutProducts-cont">
         <div class"c-img-container">
