@@ -2,14 +2,10 @@
 
 ## Project Assets
 
-- [Stackblitz](https://stackblitz.com/~/github.com/S3ak/fed1-js1-jackets-e-commerce-site-vanilla)
 - [Production deploy](https://rainylands.netlify.app/)
 - [Production Deployment Dashboard](https://app.netlify.com/sites/rainylands/overview)
-- [Design Doc]()
-- [Lo-Fi Design Spec]()
-- [Hi-Fi Design Spec]()
 - [API URL](https://docs.noroff.dev/docs/v2/e-commerce/rainy-days)
-- [Analytics dashboard](#TODO:@SanderTorg)
+- [Github](https://github.com/SanderTorg)
 - [TODOS](https://github.com/SanderTorg/fed1-rainylands-js1/issues)
 
 ## Tech Stack
@@ -23,7 +19,8 @@
 
 ## Project leads
 
-- Sander D. Torgersen: <santorgersen@gmail.no> - Technical lead
+- Sander D. Torgersen: <santorgersen@gmail.com> - Technical lead
+- Toubha Ahmad: <toubha.ah@hotmail.com>
 
 ## Features
 
@@ -42,4 +39,21 @@ Staging is the enviroment where the team can test the latest features and bug fi
 
 ## Minimum acceptence criteria
 
-Please see issues tab.
+- User Stories:
+
+- As a user, I want to view a list of products on the homepage.
+- As a user, I want to filter products by category, gender or genre.
+- As a user, I want to view a single product page with more detail.
+- As a user, I want to add a product to my basket.
+- As a user, I want to remove a product from my basket.
+- As a user, I want to view a summary of my cart on the checkout page.
+- As a user, I want to view an order-confirmation screen after checking out.
+
+Required Pages:
+The following pages are required to complete this assignment.
+
+- Home Page containing product list `/index.html`.
+- Product Page showing all details of a specific product `/product/index.html`
+- Checkout Page showing all items in the basket `/checkout/index.html`
+- Confirmation Page showing a thank you message
+  `/checkout/confirmation/index.html`
