@@ -7,6 +7,7 @@
 - [API URL](https://docs.noroff.dev/docs/v2/e-commerce/rainy-days)
 - [Github](https://github.com/SanderTorg/fed1-rainylands-js1)
 - [TODOS](https://github.com/SanderTorg/fed1-rainylands-js1/issues)
+- [Report](https://docs.google.com/document/d/1G3YM1S6RP2KnodzcPBROUFfOkWpMwJ5t23cgz6wVxLE/edit?tab=t.0)
 
 ## Tech Stack
 
