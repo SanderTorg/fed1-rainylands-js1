@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.c-main-header {
+  padding-bottom: 0.1rem;
+}
+
+.contact-container {
+  justify-self: center;
+  padding-bottom: 2rem;
+}
+
+.section-2-contact {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(239, 239, 239);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-2-title-contact {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+
+.section-2-text-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-2-paragraph {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/*Contact form*/
+.contact-form-section {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: larger;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form {
+  padding-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+@media (width>600px) {
+  .section-2-title-contact {
+    font-size: larger;
+  }
+
+  .contact-container {
+  }
+
+  .section-2-contact {
+    margin: 0 auto;
+    width: 550px;
+  }
+
+  .contact-form-section {
+    margin: 0 auto;
+    width: 550px;
+  }
+
+  .contact-form {
+    width: 550px;
+  }
+
+  .contact-form h2 {
+    font-size: x-large;
+  }
+}
+
+@media (width>900px) {
+  .section-2-contact {
+    margin: 0 auto;
+    width: 800px;
+  }
+
+  .contact-form-section {
+    margin: 0 auto;
+    width: 800px;
+  }
+}
+
+@media (width>1250px) {
+  .section-2-contact {
+    margin: 0 auto;
+    width: 980px;
+  }
+}
