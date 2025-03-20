@@ -8,6 +8,7 @@ const cartContainerEl = document.querySelector("#js-cart");
 const cartCloseBtnEl = document.querySelector("#js-close-cart");
 const containerItemsEl = document.querySelector("#js-cart-products");
 const clearCartBtnEl = document.querySelector("#js-clear-cart");
+const totalCartPriceEl = document.querySelector("#js-total");
 
 setup();
 
@@ -26,7 +27,6 @@ function setup() {
     clearCartBtnEl.addEventListener("click", clearAllItemsFromCart);
 
     const products = getItemsFromStorage();
-
     renderCartItems(products);
   }
 }
@@ -120,4 +120,36 @@ function removeItemFromCart(items = [], productId) {
   setItemsToStorage(temp);
 
   renderCartItems(temp);
+}
+
+function renderCartPrice(items = []) {
+  clearNode(totalCartPriceEl);
+
+  items.forEach(({ price, quantity }) => {
+    const template = totalPricetemplate({
+      price,
+      quantity,
+    });
+    const createNewEl = createHTML(template);
+    const total = calcTotalPrice(createNewEl);
+
+    totalCartPriceEl.append(total);
+  });
+}
+
+function totalPricetemplate({ price }) {
+  return `
+  
+  <span>${price} ${CURRENCY}</span>
+  `;
+}
+
+function calcTotalPrice(items = []) {
+  const calculateQty = items.reduce((total, item) => {
+    return total + item.quantity;
+  });
+
+  getItemsFromStorage(calculateQty);
+
+  renderCartPrice(calculateQty);
 }

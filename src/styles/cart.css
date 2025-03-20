@@ -48,7 +48,8 @@
 .c-cart-container {
   display: flex;
   gap: 0.25rem;
-  width: 100%;
+  max-width: 350px;
+  height: auto;
 }
 
 .c-cart-col-1 {
